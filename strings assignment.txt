@@ -1,0 +1,102 @@
+#decrease one character after each line
+s="greek"
+i=len(s)
+while i >0:
+    for j in range(0,i):
+        print(s[j],end=" ")
+    print(end="\n")
+    i-=1        
+
+
+#removing  i th character for string 
+def remove(s,i):
+    x=s[:i]
+    y=s[i+1:]
+    return x+y
+y=remove("hindi",1) 
+print(y)   
+
+
+#program to find length of string
+
+def fun(s):
+    count=0
+    for ele in s:
+        count+=1
+    return count    
+y=fun("java")
+print("length of word is :" ,y)    
+ 
+# write a program to print even lenght word in a string
+s=input("enter a string :")
+x=s.split(' ')
+for i in x:
+    if len(i)%2==0:
+        print("even no string :", i)
+    else:
+        print("odd no string :", i)    
+
+#write a program to print first half of ele in upper and next half in lower
+
+s="palindrome"
+print(len(s))
+y=len(s)//2
+print(y)
+if len(s)<=y:
+    print(s.upper)
+else:
+    if len(s)>y:
+        print(s.lower())    
+
+from datetime import datetime
+print(datetime.today())
+
+
+s="05/04/2020"
+a=s.split('/')
+print("day :",a[0])
+print("month :", a[1])
+print("year :",a[2])
+
+#print duplicate ele in string
+s="abcdacdefg"
+for ele in s:
+    if s.count(ele)>1:
+        print(ele, end=" ")
+
+
+# print vowels and consonents in a given string 
+vowels=['a','e','i','o','u']
+s=input("enter a value :")
+for ele in s:
+    if ele in vowels:
+        print("vowels :", ele)
+    else:
+        print("consonents :", ele)    
+
+# convert even no length ele to upper case
+s="bangalore located in karnataka ka"
+v=s.split(' ')
+for ele in v:
+    if len(ele)%2==0:
+        print(ele.upper())
+    # print(ele, len(ele))
+
+s="nandish  from  chitradurga"
+s.strip()
+print(s)
+v=s.replace("   ", " ")
+print(v)
+
+# replace small letter with capital letter
+s="HELLo WORLD"
+for ele in s:
+    if ele.islower():
+        x=ele.upper()
+        print(s.replace("o",x))
+
+#pattern
+for i in range(0,5):
+    for j in range(0,5):
+        print("*", end=" ")
+    print(" ")    
